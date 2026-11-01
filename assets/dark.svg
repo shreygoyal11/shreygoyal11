@@ -1,229 +1,364 @@
-<svg width="1180" height="610" viewBox="0 0 1180 610" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <clipPath id="cardClip"><rect x="0" y="0" width="1180" height="610" rx="24"/></clipPath>
+<svg width="1180" height="3300" viewBox="0 0 1180 3300" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <clipPath id="frame"><rect width="1180" height="3300" rx="28"/></clipPath>
+  <pattern id="gridS" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity=".035"/>
+  </pattern>
+  <pattern id="gridL" width="200" height="200" patternUnits="userSpaceOnUse">
+    <path d="M200 0H0V200" fill="none" stroke="#ffffff" stroke-opacity=".06"/>
+  </pattern>
+  <linearGradient id="hot" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#D4FF3A"/><stop offset=".55" stop-color="#5CE1E6"/><stop offset="1" stop-color="#D4FF3A"/>
+    <animate attributeName="x1" values="0;-1;0" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="1;0;1" dur="7s" repeatCount="indefinite"/>
+  </linearGradient>
+  <linearGradient id="award" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#D4FF3A"/><stop offset="1" stop-color="#FF6B35"/>
+  </linearGradient>
+  <linearGradient id="spineFlow" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#D4FF3A" stop-opacity="0"/><stop offset="1" stop-color="#D4FF3A"/>
+  </linearGradient>
+  <linearGradient id="keyTop" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#1F2733"/><stop offset="1" stop-color="#141A22"/>
+  </linearGradient>
+  <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#D4FF3A" stop-opacity="0"/><stop offset="1" stop-color="#D4FF3A" stop-opacity=".45"/>
+  </linearGradient>
+  <radialGradient id="bLime"><stop offset="0" stop-color="#D4FF3A" stop-opacity=".16"/><stop offset="1" stop-color="#D4FF3A" stop-opacity="0"/></radialGradient>
+  <radialGradient id="bCyan"><stop offset="0" stop-color="#5CE1E6" stop-opacity=".14"/><stop offset="1" stop-color="#5CE1E6" stop-opacity="0"/></radialGradient>
+  <radialGradient id="bOrange"><stop offset="0" stop-color="#FF6B35" stop-opacity=".16"/><stop offset="1" stop-color="#FF6B35" stop-opacity="0"/></radialGradient>
+  <radialGradient id="bLilac"><stop offset="0" stop-color="#B392F0" stop-opacity=".14"/><stop offset="1" stop-color="#B392F0" stop-opacity="0"/></radialGradient>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <path id="stampPath" d="M1010,2392 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0"/>
+</defs>
+<g clip-path="url(#frame)">
+<rect width="1180" height="3300" fill="#07090D"/>
 
-    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#7C3AED"/>
-      <stop offset="50%" stop-color="#22D3EE"/>
-      <stop offset="100%" stop-color="#10B981"/>
-      <animate attributeName="x1" values="0%;100%;0%" dur="8s" repeatCount="indefinite"/>
-      <animate attributeName="x2" values="100%;0%;100%" dur="8s" repeatCount="indefinite"/>
-    </linearGradient>
-
-    <linearGradient id="asciiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#22D3EE"/>
-      <stop offset="50%" stop-color="#7C3AED"/>
-      <stop offset="100%" stop-color="#22D3EE"/>
-      <animate attributeName="x1" values="0%;100%;0%" dur="6s" repeatCount="indefinite"/>
-      <animate attributeName="x2" values="100%;0%;100%" dur="6s" repeatCount="indefinite"/>
-    </linearGradient>
-
-    <radialGradient id="blobBlue" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#2563EB" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="blobPurple" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="blobEmerald" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#10B981" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
-    </radialGradient>
-
-    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="18"/>
-    </filter>
-  </defs>
-
-  <g clip-path="url(#cardClip)">
-    <rect x="0" y="0" width="1180" height="610" fill="#030712"/>
-
-    <circle cx="180" cy="150" r="220" fill="url(#blobBlue)" filter="url(#softBlur)">
-      <animateTransform attributeName="transform" type="translate" values="0,0;30,20;0,0" dur="9s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="950" cy="480" r="260" fill="url(#blobPurple)" filter="url(#softBlur)">
-      <animateTransform attributeName="transform" type="translate" values="0,0;-25,-15;0,0" dur="11s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="850" cy="100" r="180" fill="url(#blobEmerald)" filter="url(#softBlur)">
-      <animateTransform attributeName="transform" type="translate" values="0,0;15,25;0,0" dur="10s" repeatCount="indefinite"/>
-    </circle>
-
-    <!-- floating particles -->
-    <g fill="#22D3EE">
-      <circle cx="120" cy="500" r="2"><animate attributeName="opacity" values="0;1;0" dur="4s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0,0;0,-30;0,0" dur="4s" repeatCount="indefinite"/></circle>
-      <circle cx="380" cy="80" r="1.6"><animate attributeName="opacity" values="0;1;0" dur="5s" begin="1s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0,0;0,-25;0,0" dur="5s" begin="1s" repeatCount="indefinite"/></circle>
-      <circle cx="900" cy="550" r="2" fill="#7C3AED"><animate attributeName="opacity" values="0;1;0" dur="6s" begin="2s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0,0;0,-35;0,0" dur="6s" begin="2s" repeatCount="indefinite"/></circle>
-      <circle cx="1080" cy="200" r="1.8" fill="#10B981"><animate attributeName="opacity" values="0;1;0" dur="4.5s" begin="0.5s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0,0;0,-28;0,0" dur="4.5s" begin="0.5s" repeatCount="indefinite"/></circle>
-    </g>
-
-    <!-- scanline sweep -->
-    <rect x="0" y="0" width="1180" height="3" fill="#22D3EE" opacity="0.06">
-      <animate attributeName="y" values="0;610;0" dur="7s" repeatCount="indefinite"/>
-    </rect>
-
-    <!-- border shimmer -->
-    <rect x="2" y="2" width="1176" height="606" rx="22" fill="none" stroke="url(#accentGrad)" stroke-width="1.5" opacity="0.55"/>
-    <rect x="2" y="2" width="1176" height="606" rx="22" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
-
-    <!-- ================= LEFT: ASCII PANEL ================= -->
-    <g transform="translate(48,60)">
-      <rect x="0" y="0" width="392" height="490" rx="18" fill="#0F172A" opacity="0.55" stroke="rgba(255,255,255,.08)"/>
-      <g transform="translate(28,44)">
-        <animateTransform attributeName="transform" type="translate" values="28,44;28,34;28,44" dur="5s" repeatCount="indefinite" additive="sum"/>
-        <text font-family="Consolas, Menlo, monospace" font-size="13" fill="url(#asciiGrad)" filter="url(#glow)">
-          <tspan x="0" dy="0" opacity="0"> ██████╗ ███████╗██╗   ██╗<animate attributeName="opacity" to="1" begin="0.2s" dur="0.4s" fill="freeze"/></tspan>
-          <tspan x="0" dy="18" opacity="0"> ██╔══██╗██╔════╝██║   ██║<animate attributeName="opacity" to="1" begin="0.5s" dur="0.4s" fill="freeze"/></tspan>
-          <tspan x="0" dy="18" opacity="0"> ██║  ██║█████╗  ██║   ██║<animate attributeName="opacity" to="1" begin="0.8s" dur="0.4s" fill="freeze"/></tspan>
-          <tspan x="0" dy="18" opacity="0"> ██║  ██║██╔══╝  ╚██╗ ██╔╝<animate attributeName="opacity" to="1" begin="1.1s" dur="0.4s" fill="freeze"/></tspan>
-          <tspan x="0" dy="18" opacity="0"> ██████╔╝███████╗ ╚████╔╝ <animate attributeName="opacity" to="1" begin="1.4s" dur="0.4s" fill="freeze"/></tspan>
-          <tspan x="0" dy="18" opacity="0"> ╚═════╝ ╚══════╝  ╚═══╝  <animate attributeName="opacity" to="1" begin="1.7s" dur="0.4s" fill="freeze"/></tspan>
-          <tspan x="0" dy="46" opacity="0">   ╭──────────────╮<animate attributeName="opacity" to="1" begin="2.1s" dur="0.4s" fill="freeze"/></tspan>
-          <tspan x="0" dy="18" opacity="0">   │  ┌────────┐  │<animate attributeName="opacity" to="1" begin="2.3s" dur="0.4s" fill="freeze"/></tspan>
-          <tspan x="0" dy="18" opacity="0">   │  │ ◉    ◉ │  │<animate attributeName="opacity" to="1" begin="2.5s" dur="0.4s" fill="freeze"/></tspan>
-          <tspan x="0" dy="18" opacity="0">   │  │   ▽    │  │<animate attributeName="opacity" to="1" begin="2.7s" dur="0.4s" fill="freeze"/></tspan>
-          <tspan x="0" dy="18" opacity="0">   │  │ ╰────╯ │  │<animate attributeName="opacity" to="1" begin="2.9s" dur="0.4s" fill="freeze"/></tspan>
-          <tspan x="0" dy="18" opacity="0">   │  └────────┘  │<animate attributeName="opacity" to="1" begin="3.1s" dur="0.4s" fill="freeze"/></tspan>
-          <tspan x="0" dy="18" opacity="0">   ╰──────────────╯<animate attributeName="opacity" to="1" begin="3.3s" dur="0.4s" fill="freeze"/></tspan>
-          <tspan x="0" dy="18" opacity="0">     ░░░▓▓▓▓▓░░░<animate attributeName="opacity" to="1" begin="3.5s" dur="0.4s" fill="freeze"/></tspan>
-          <tspan x="0" dy="18" opacity="0">    ░▓▓▓█████▓▓▓░<animate attributeName="opacity" to="1" begin="3.7s" dur="0.4s" fill="freeze"/></tspan>
-          <tspan x="0" dy="18" opacity="0">    ░▓▓███████▓▓░<animate attributeName="opacity" to="1" begin="3.9s" dur="0.4s" fill="freeze"/></tspan>
-        </text>
-        <!-- blinking cursor -->
-        <rect x="0" y="322" width="9" height="14" fill="#22D3EE" opacity="0">
-          <animate attributeName="opacity" values="0;0;1;1;0;0" dur="1s" begin="4.1s" repeatCount="indefinite"/>
-        </rect>
-      </g>
-      <text x="28" y="470" font-family="Consolas, Menlo, monospace" font-size="11" fill="#94A3B8" opacity="0">
-        system.status: online
-        <animate attributeName="opacity" to="1" begin="4.2s" dur="0.6s" fill="freeze"/>
-      </text>
-    </g>
-
-    <!-- ================= RIGHT: TERMINAL PANEL ================= -->
-    <g transform="translate(468,60)">
-      <rect x="0" y="0" width="664" height="490" rx="18" fill="#0F172A" opacity="0.6" stroke="rgba(255,255,255,.08)"/>
-
-      <!-- title bar -->
-      <rect x="0" y="0" width="664" height="38" rx="18" fill="rgba(255,255,255,.03)"/>
-      <circle cx="24" cy="19" r="6" fill="#EF4444" opacity="0.7"/>
-      <circle cx="46" cy="19" r="6" fill="#F59E0B" opacity="0.7"/>
-      <circle cx="68" cy="19" r="6" fill="#10B981" opacity="0.7"/>
-      <text x="332" y="24" font-family="Consolas, Menlo, monospace" font-size="12" fill="#94A3B8" text-anchor="middle">dev@profile: ~</text>
-
-      <g font-family="Consolas, Menlo, monospace">
-        <!-- greeting -->
-        <text x="32" y="76" font-size="20" fill="#F8FAFC" opacity="0">Hi 👋
-          <animate attributeName="opacity" to="1" begin="0.3s" dur="0.5s" fill="freeze"/>
-        </text>
-        <text x="32" y="108" font-size="26" font-weight="bold" fill="url(#accentGrad)" filter="url(#glow)" opacity="0">I'm Shrey Goyal
-          <animate attributeName="opacity" to="1" begin="0.8s" dur="0.5s" fill="freeze"/>
-        </text>
-
-        <!-- typing role rotation via clip reveal -->
-        <g transform="translate(32,140)">
-          <text font-size="16" fill="#22D3EE">
-            <tspan>&gt;&#160;</tspan>
-          </text>
-          <clipPath id="typeClip1"><rect x="0" y="-16" width="0" height="24"><animate attributeName="width" values="0;230;230;0;0" keyTimes="0;0.15;0.4;0.45;1" dur="10s" begin="1.3s" repeatCount="indefinite"/></rect></clipPath>
-          <text x="18" font-size="16" fill="#F8FAFC" clip-path="url(#typeClip1)">Software Developer</text>
-
-          <clipPath id="typeClip2"><rect x="0" y="-16" width="0" height="24"><animate attributeName="width" values="0;0;220;220;0;0" keyTimes="0;0.45;0.6;0.85;0.9;1" dur="10s" begin="1.3s" repeatCount="indefinite"/></rect></clipPath>
-          <text x="18" font-size="16" fill="#F8FAFC" clip-path="url(#typeClip2)">Full Stack Engineer</text>
-
-          <rect x="18" y="-16" width="2" height="20" fill="#22D3EE">
-            <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/>
-            <animate attributeName="x" values="18;248;18;238;18" keyTimes="0;0.15;0.45;0.6;1" dur="10s" begin="1.3s" repeatCount="indefinite"/>
-          </rect>
-        </g>
-
-        <!-- info list -->
-        <g font-size="13" fill="#94A3B8">
-          <text x="32" y="196" opacity="0">📍 Zirakpur, Punjab, India<animate attributeName="opacity" to="1" begin="2.0s" dur="0.4s" fill="freeze"/></text>
-          <text x="32" y="220" opacity="0">🎓 B.Tech CSE, Thapar Institute<animate attributeName="opacity" to="1" begin="2.3s" dur="0.4s" fill="freeze"/></text>
-          <text x="32" y="244" opacity="0">💡 Building full-stack systems @ SuccessBrew<animate attributeName="opacity" to="1" begin="2.6s" dur="0.4s" fill="freeze"/></text>
-          <text x="32" y="268" opacity="0">🏆 National Winner — SIH 2025<animate attributeName="opacity" to="1" begin="2.9s" dur="0.4s" fill="freeze"/></text>
-          <text x="32" y="292" opacity="0">✉️ shreygoyal50@gmail.com<animate attributeName="opacity" to="1" begin="3.2s" dur="0.4s" fill="freeze"/></text>
-        </g>
-
-        <!-- skills -->
-        <text x="32" y="330" font-size="13" fill="#F8FAFC" opacity="0">Skills<animate attributeName="opacity" to="1" begin="3.5s" dur="0.4s" fill="freeze"/></text>
-        <g font-size="12" fill="#F8FAFC">
-          <!-- pill helper pattern repeated -->
-          <g opacity="0"><animate attributeName="opacity" to="1" begin="3.6s" dur="0.4s" fill="freeze"/>
-            <rect x="32" y="344" width="66" height="26" rx="13" fill="rgba(124,58,237,.15)" stroke="url(#accentGrad)" filter="url(#glow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/></rect>
-            <text x="65" y="361" text-anchor="middle">React</text>
-          </g>
-          <g opacity="0"><animate attributeName="opacity" to="1" begin="3.65s" dur="0.4s" fill="freeze"/>
-            <rect x="106" y="344" width="76" height="26" rx="13" fill="rgba(124,58,237,.15)" stroke="url(#accentGrad)" filter="url(#glow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3s" begin="0.2s" repeatCount="indefinite"/></rect>
-            <text x="144" y="361" text-anchor="middle">FastAPI</text>
-          </g>
-          <g opacity="0"><animate attributeName="opacity" to="1" begin="3.7s" dur="0.4s" fill="freeze"/>
-            <rect x="190" y="344" width="78" height="26" rx="13" fill="rgba(124,58,237,.15)" stroke="url(#accentGrad)" filter="url(#glow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3s" begin="0.4s" repeatCount="indefinite"/></rect>
-            <text x="229" y="361" text-anchor="middle">Node.js</text>
-          </g>
-          <g opacity="0"><animate attributeName="opacity" to="1" begin="3.75s" dur="0.4s" fill="freeze"/>
-            <rect x="276" y="344" width="92" height="26" rx="13" fill="rgba(124,58,237,.15)" stroke="url(#accentGrad)" filter="url(#glow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3s" begin="0.6s" repeatCount="indefinite"/></rect>
-            <text x="322" y="361" text-anchor="middle">TypeScript</text>
-          </g>
-          <g opacity="0"><animate attributeName="opacity" to="1" begin="3.8s" dur="0.4s" fill="freeze"/>
-            <rect x="376" y="344" width="82" height="26" rx="13" fill="rgba(124,58,237,.15)" stroke="url(#accentGrad)" filter="url(#glow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3s" begin="0.8s" repeatCount="indefinite"/></rect>
-            <text x="417" y="361" text-anchor="middle">Tailwind</text>
-          </g>
-          <g opacity="0"><animate attributeName="opacity" to="1" begin="3.85s" dur="0.4s" fill="freeze"/>
-            <rect x="466" y="344" width="70" height="26" rx="13" fill="rgba(124,58,237,.15)" stroke="url(#accentGrad)" filter="url(#glow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3s" begin="1s" repeatCount="indefinite"/></rect>
-            <text x="501" y="361" text-anchor="middle">Python</text>
-          </g>
-          <g opacity="0"><animate attributeName="opacity" to="1" begin="3.9s" dur="0.4s" fill="freeze"/>
-            <rect x="32" y="380" width="68" height="26" rx="13" fill="rgba(124,58,237,.15)" stroke="url(#accentGrad)" filter="url(#glow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3s" begin="1.2s" repeatCount="indefinite"/></rect>
-            <text x="66" y="397" text-anchor="middle">Firebase</text>
-          </g>
-          <g opacity="0"><animate attributeName="opacity" to="1" begin="3.95s" dur="0.4s" fill="freeze"/>
-            <rect x="106" y="380" width="82" height="26" rx="13" fill="rgba(124,58,237,.15)" stroke="url(#accentGrad)" filter="url(#glow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3s" begin="1.4s" repeatCount="indefinite"/></rect>
-            <text x="147" y="397" text-anchor="middle">Postgres</text>
-          </g>
-          <g opacity="0"><animate attributeName="opacity" to="1" begin="4.0s" dur="0.4s" fill="freeze"/>
-            <rect x="194" y="380" width="60" height="26" rx="13" fill="rgba(124,58,237,.15)" stroke="url(#accentGrad)" filter="url(#glow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3s" begin="1.6s" repeatCount="indefinite"/></rect>
-            <text x="224" y="397" text-anchor="middle">SQL</text>
-          </g>
-          <g opacity="0"><animate attributeName="opacity" to="1" begin="4.05s" dur="0.4s" fill="freeze"/>
-            <rect x="260" y="380" width="52" height="26" rx="13" fill="rgba(124,58,237,.15)" stroke="url(#accentGrad)" filter="url(#glow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3s" begin="1.8s" repeatCount="indefinite"/></rect>
-            <text x="286" y="397" text-anchor="middle">Git</text>
-          </g>
-          <g opacity="0"><animate attributeName="opacity" to="1" begin="4.1s" dur="0.4s" fill="freeze"/>
-            <rect x="318" y="380" width="66" height="26" rx="13" fill="rgba(124,58,237,.15)" stroke="url(#accentGrad)" filter="url(#glow)"><animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="3s" begin="2s" repeatCount="indefinite"/></rect>
-            <text x="351" y="397" text-anchor="middle">Sklearn</text>
-          </g>
-        </g>
-
-        <!-- social icons -->
-        <g transform="translate(32,436)" opacity="0">
-          <animate attributeName="opacity" to="1" begin="4.4s" dur="0.5s" fill="freeze"/>
-          <line x1="0" y1="-16" x2="632" y2="-16" stroke="rgba(255,255,255,.08)"/>
-          <g fill="none" stroke="#F8FAFC" stroke-width="1.4" filter="url(#glow)">
-            <circle cx="14" cy="14" r="14" fill="rgba(255,255,255,.04)"/>
-            <text x="14" y="19" text-anchor="middle" font-size="13" fill="#F8FAFC" stroke="none" font-family="Consolas, Menlo, monospace">GH</text>
-
-            <circle cx="58" cy="14" r="14" fill="rgba(255,255,255,.04)"/>
-            <text x="58" y="19" text-anchor="middle" font-size="12" fill="#F8FAFC" stroke="none" font-family="Consolas, Menlo, monospace">in</text>
-
-            <circle cx="102" cy="14" r="14" fill="rgba(255,255,255,.04)"/>
-            <text x="102" y="19" text-anchor="middle" font-size="11" fill="#F8FAFC" stroke="none" font-family="Consolas, Menlo, monospace">LC</text>
-          </g>
-          <g fill="none" stroke="#22D3EE" stroke-width="1">
-            <circle cx="14" cy="14" r="14"><animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/></circle>
-            <circle cx="58" cy="14" r="14"><animate attributeName="opacity" values="0.4;1;0.4" dur="3s" begin="0.3s" repeatCount="indefinite"/></circle>
-            <circle cx="102" cy="14" r="14"><animate attributeName="opacity" values="0.4;1;0.4" dur="3s" begin="0.6s" repeatCount="indefinite"/></circle>
-          </g>
-        </g>
-      </g>
-    </g>
-  </g>
-</svg>
+<circle cx="220" cy="220" r="380" fill="url(#bLime)"><animateTransform attributeName="transform" type="translate" values="0,0;40,30;0,0" dur="12s" repeatCount="indefinite"/></circle>
+<circle cx="1020" cy="760" r="420" fill="url(#bCyan)"><animateTransform attributeName="transform" type="translate" values="0,0;-40,30;0,0" dur="14s" repeatCount="indefinite"/></circle>
+<circle cx="140" cy="1460" r="420" fill="url(#bOrange)"><animateTransform attributeName="transform" type="translate" values="0,0;50,-30;0,0" dur="13s" repeatCount="indefinite"/></circle>
+<circle cx="1060" cy="1900" r="400" fill="url(#bLilac)"><animateTransform attributeName="transform" type="translate" values="0,0;-30,-40;0,0" dur="15s" repeatCount="indefinite"/></circle>
+<circle cx="300" cy="2460" r="420" fill="url(#bLime)"><animateTransform attributeName="transform" type="translate" values="0,0;40,20;0,0" dur="12s" repeatCount="indefinite"/></circle>
+<circle cx="980" cy="3000" r="420" fill="url(#bOrange)"><animateTransform attributeName="transform" type="translate" values="0,0;-40,-20;0,0" dur="14s" repeatCount="indefinite"/></circle>
+<rect width="1180" height="3300" fill="url(#gridS)"/><rect width="1180" height="3300" fill="url(#gridL)"/>
+<path d="M1156,40h-4 M1156,60h-4 M1156,80h-4 M1156,100h-8 M1156,120h-4 M1156,140h-4 M1156,160h-4 M1156,180h-4 M1156,200h-14 M1156,220h-4 M1156,240h-4 M1156,260h-4 M1156,280h-4 M1156,300h-8 M1156,320h-4 M1156,340h-4 M1156,360h-4 M1156,380h-4 M1156,400h-14 M1156,420h-4 M1156,440h-4 M1156,460h-4 M1156,480h-4 M1156,500h-8 M1156,520h-4 M1156,540h-4 M1156,560h-4 M1156,580h-4 M1156,600h-14 M1156,620h-4 M1156,640h-4 M1156,660h-4 M1156,680h-4 M1156,700h-8 M1156,720h-4 M1156,740h-4 M1156,760h-4 M1156,780h-4 M1156,800h-14 M1156,820h-4 M1156,840h-4 M1156,860h-4 M1156,880h-4 M1156,900h-8 M1156,920h-4 M1156,940h-4 M1156,960h-4 M1156,980h-4 M1156,1000h-14 M1156,1020h-4 M1156,1040h-4 M1156,1060h-4 M1156,1080h-4 M1156,1100h-8 M1156,1120h-4 M1156,1140h-4 M1156,1160h-4 M1156,1180h-4 M1156,1200h-14 M1156,1220h-4 M1156,1240h-4 M1156,1260h-4 M1156,1280h-4 M1156,1300h-8 M1156,1320h-4 M1156,1340h-4 M1156,1360h-4 M1156,1380h-4 M1156,1400h-14 M1156,1420h-4 M1156,1440h-4 M1156,1460h-4 M1156,1480h-4 M1156,1500h-8 M1156,1520h-4 M1156,1540h-4 M1156,1560h-4 M1156,1580h-4 M1156,1600h-14 M1156,1620h-4 M1156,1640h-4 M1156,1660h-4 M1156,1680h-4 M1156,1700h-8 M1156,1720h-4 M1156,1740h-4 M1156,1760h-4 M1156,1780h-4 M1156,1800h-14 M1156,1820h-4 M1156,1840h-4 M1156,1860h-4 M1156,1880h-4 M1156,1900h-8 M1156,1920h-4 M1156,1940h-4 M1156,1960h-4 M1156,1980h-4 M1156,2000h-14 M1156,2020h-4 M1156,2040h-4 M1156,2060h-4 M1156,2080h-4 M1156,2100h-8 M1156,2120h-4 M1156,2140h-4 M1156,2160h-4 M1156,2180h-4 M1156,2200h-14 M1156,2220h-4 M1156,2240h-4 M1156,2260h-4 M1156,2280h-4 M1156,2300h-8 M1156,2320h-4 M1156,2340h-4 M1156,2360h-4 M1156,2380h-4 M1156,2400h-14 M1156,2420h-4 M1156,2440h-4 M1156,2460h-4 M1156,2480h-4 M1156,2500h-8 M1156,2520h-4 M1156,2540h-4 M1156,2560h-4 M1156,2580h-4 M1156,2600h-14 M1156,2620h-4 M1156,2640h-4 M1156,2660h-4 M1156,2680h-4 M1156,2700h-8 M1156,2720h-4 M1156,2740h-4 M1156,2760h-4 M1156,2780h-4 M1156,2800h-14 M1156,2820h-4 M1156,2840h-4 M1156,2860h-4 M1156,2880h-4 M1156,2900h-8 M1156,2920h-4 M1156,2940h-4 M1156,2960h-4 M1156,2980h-4 M1156,3000h-14 M1156,3020h-4 M1156,3040h-4 M1156,3060h-4 M1156,3080h-4 M1156,3100h-8 M1156,3120h-4 M1156,3140h-4 M1156,3160h-4 M1156,3180h-4 M1156,3200h-14 M1156,3220h-4 M1156,3240h-4" stroke="#ffffff" stroke-opacity=".18" stroke-width="1"/>
+<text x="1136" y="204" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="9" fill="#3A424D" text-anchor="end">0200</text>
+<text x="1136" y="604" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="9" fill="#3A424D" text-anchor="end">0600</text>
+<text x="1136" y="1004" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="9" fill="#3A424D" text-anchor="end">1000</text>
+<text x="1136" y="1404" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="9" fill="#3A424D" text-anchor="end">1400</text>
+<text x="1136" y="1804" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="9" fill="#3A424D" text-anchor="end">1800</text>
+<text x="1136" y="2204" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="9" fill="#3A424D" text-anchor="end">2200</text>
+<text x="1136" y="2604" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="9" fill="#3A424D" text-anchor="end">2600</text>
+<text x="1136" y="3004" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="9" fill="#3A424D" text-anchor="end">3000</text>
+<rect x="1.5" y="1.5" width="1177" height="3297" rx="27" fill="none" stroke="url(#hot)" stroke-opacity=".5" stroke-width="1.5"/>
+<line x1="64" y1="110" x2="64" y2="3072" stroke="#ffffff" stroke-opacity=".12"/>
+<line x1="64" y1="110" x2="64" y2="3072" stroke="#D4FF3A" stroke-opacity=".5" stroke-dasharray="2 12"><animate attributeName="stroke-dashoffset" values="0;-28" dur="1.2s" repeatCount="indefinite"/></line>
+<rect x="62.5" y="110" width="3" height="90" fill="url(#spineFlow)" filter="url(#glow)"><animate attributeName="y" values="110;2982" dur="14s" repeatCount="indefinite"/></rect>
+<text x="120" y="60" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="14" font-weight="700" fill="#D4FF3A" letter-spacing="3">SHREY.SYS</text>
+<text x="236" y="60" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="12" fill="#7D8794">// profile build 2026.10</text>
+<circle cx="868" cy="55" r="4" fill="#D4FF3A" filter="url(#glow)"><animate attributeName="opacity" values="1;.25;1" dur="1.6s" repeatCount="indefinite"/></circle>
+<text x="880" y="60" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="12" fill="#E8EDF2" letter-spacing="2">ONLINE</text>
+<text x="1120" y="60" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="12" fill="#7D8794" text-anchor="end">30.64°N · 76.82°E</text>
+<path d="M120,80H1120" stroke="#ffffff" stroke-opacity=".1"/>
+<text x="120" y="148" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="13" fill="#D4FF3A" letter-spacing="2" opacity="0">§00 — init sequence<animate attributeName="opacity" from="0" to="1" begin="0.1s" dur="0.5s" fill="freeze"/></text>
+<text x="120" y="204" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="30" fill="#E8EDF2" opacity="0">Hi, I’m<animate attributeName="opacity" from="0" to="1" begin="0.3s" dur="0.5s" fill="freeze"/></text>
+<text x="110" y="350" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="156" font-weight="800" letter-spacing="-4" fill="url(#hot)" fill-opacity="0" stroke="#D4FF3A" stroke-width="1.5" stroke-dasharray="900" stroke-dashoffset="900">SHREY<animate attributeName="stroke-dashoffset" to="0" begin="0.4s" dur="2.2s" fill="freeze"/><animate attributeName="fill-opacity" to="1" begin="2s" dur="0.8s" fill="freeze"/></text>
+<text x="110" y="492" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="156" font-weight="800" letter-spacing="-4" fill="none" stroke="#E8EDF2" stroke-opacity=".85" stroke-width="1.4" stroke-dasharray="900" stroke-dashoffset="900">GOYAL<animate attributeName="stroke-dashoffset" to="0" begin="0.9s" dur="2.4s" fill="freeze"/></text>
+<g transform="translate(120,556)" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="22">
+<text fill="#D4FF3A">&gt;</text>
+<clipPath id="role0"><rect x="28" y="-24" width="0" height="34"><animate attributeName="width" values="0.0;241.6;241.6;0.0;0.0" keyTimes="0.0000;0.1167;0.2667;0.3167;1.0000" dur="12s" repeatCount="indefinite"/></rect></clipPath>
+<text x="30" fill="#E8EDF2" clip-path="url(#role0)">software developer</text>
+<clipPath id="role1"><rect x="28" y="-24" width="0" height="34"><animate attributeName="width" values="0.0;0.0;254.8;254.8;0.0;0.0" keyTimes="0.0000;0.3333;0.4500;0.6000;0.6500;1.0000" dur="12s" repeatCount="indefinite"/></rect></clipPath>
+<text x="30" fill="#E8EDF2" clip-path="url(#role1)">full-stack engineer</text>
+<clipPath id="role2"><rect x="28" y="-24" width="0" height="34"><animate attributeName="width" values="0.0;0.0;307.6;307.6;0.0;0.0" keyTimes="0.0000;0.6667;0.7833;0.9333;0.9833;1.0000" dur="12s" repeatCount="indefinite"/></rect></clipPath>
+<text x="30" fill="#E8EDF2" clip-path="url(#role2)">SIH ’25 national winner</text>
+<rect x="30" y="-20" width="11" height="26" fill="#D4FF3A"><animate attributeName="x" values="30.0;271.6;271.6;30.0;30.0;284.8;284.8;30.0;30.0;337.6;337.6;30.0;30.0" keyTimes="0.0000;0.1167;0.2667;0.3167;0.3333;0.4500;0.6000;0.6500;0.6667;0.7833;0.9333;0.9833;1.0000" dur="12s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.5;.5;1" dur="1s" repeatCount="indefinite"/></rect>
+</g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="2.8s" dur="0.5s" fill="freeze"/><path d="M120,604h26" stroke="#D4FF3A" stroke-width="2"/><text x="120" y="626" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#7D8794" letter-spacing="2">BASED IN</text><text x="120" y="650" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="16" fill="#E8EDF2">Zirakpur, Punjab</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="3.0s" dur="0.5s" fill="freeze"/><path d="M350,604h26" stroke="#D4FF3A" stroke-width="2"/><text x="350" y="626" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#7D8794" letter-spacing="2">STUDYING</text><text x="350" y="650" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="16" fill="#E8EDF2">B.Tech CSE · Thapar ’27</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="3.1999999999999997s" dur="0.5s" fill="freeze"/><path d="M580,604h26" stroke="#D4FF3A" stroke-width="2"/><text x="580" y="626" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#7D8794" letter-spacing="2">BUILDING @</text><text x="580" y="650" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="16" fill="#E8EDF2">SuccessBrew</text></g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.6s" dur="1.2s" fill="freeze"/>
+<circle cx="935" cy="318" r="191" fill="none" stroke="#7D8794" stroke-opacity=".35" stroke-dasharray="2 6"><animateTransform attributeName="transform" type="rotate" from="0 935 318" to="360 935 318" dur="60s" repeatCount="indefinite"/></circle>
+<circle cx="935" cy="318" r="165" fill="#07090D" fill-opacity=".6" stroke="#D4FF3A" stroke-opacity=".8" stroke-width="1.4"/>
+<ellipse cx="935" cy="460.9" rx="82.5" ry="13.2" fill="none" stroke="#5CE1E6" stroke-opacity=".35"/>
+<ellipse cx="935" cy="400.5" rx="142.9" ry="22.9" fill="none" stroke="#5CE1E6" stroke-opacity=".35"/>
+<ellipse cx="935" cy="318.0" rx="165.0" ry="26.4" fill="none" stroke="#5CE1E6" stroke-opacity=".35"/>
+<ellipse cx="935" cy="235.5" rx="142.9" ry="22.9" fill="none" stroke="#5CE1E6" stroke-opacity=".35"/>
+<ellipse cx="935" cy="175.1" rx="82.5" ry="13.2" fill="none" stroke="#5CE1E6" stroke-opacity=".35"/>
+<ellipse cx="935" cy="318" rx="165" ry="165" fill="none" stroke="#D4FF3A" stroke-opacity=".55"><animate attributeName="rx" values="165.0;161.8;152.4;137.2;116.7;91.7;63.1;32.2;0.0;32.2;63.1;91.7;116.7;137.2;152.4;161.8;165.0" dur="9s" begin="0.0s" repeatCount="indefinite"/></ellipse>
+<ellipse cx="935" cy="318" rx="165" ry="165" fill="none" stroke="#D4FF3A" stroke-opacity=".55"><animate attributeName="rx" values="165.0;161.8;152.4;137.2;116.7;91.7;63.1;32.2;0.0;32.2;63.1;91.7;116.7;137.2;152.4;161.8;165.0" dur="9s" begin="-1.5s" repeatCount="indefinite"/></ellipse>
+<ellipse cx="935" cy="318" rx="165" ry="165" fill="none" stroke="#D4FF3A" stroke-opacity=".55"><animate attributeName="rx" values="165.0;161.8;152.4;137.2;116.7;91.7;63.1;32.2;0.0;32.2;63.1;91.7;116.7;137.2;152.4;161.8;165.0" dur="9s" begin="-3.0s" repeatCount="indefinite"/></ellipse>
+<ellipse cx="935" cy="318" rx="165" ry="165" fill="none" stroke="#D4FF3A" stroke-opacity=".55"><animate attributeName="rx" values="165.0;161.8;152.4;137.2;116.7;91.7;63.1;32.2;0.0;32.2;63.1;91.7;116.7;137.2;152.4;161.8;165.0" dur="9s" begin="-4.5s" repeatCount="indefinite"/></ellipse>
+<ellipse cx="935" cy="318" rx="165" ry="165" fill="none" stroke="#D4FF3A" stroke-opacity=".55"><animate attributeName="rx" values="165.0;161.8;152.4;137.2;116.7;91.7;63.1;32.2;0.0;32.2;63.1;91.7;116.7;137.2;152.4;161.8;165.0" dur="9s" begin="-6.0s" repeatCount="indefinite"/></ellipse>
+<ellipse cx="935" cy="318" rx="165" ry="165" fill="none" stroke="#D4FF3A" stroke-opacity=".55"><animate attributeName="rx" values="165.0;161.8;152.4;137.2;116.7;91.7;63.1;32.2;0.0;32.2;63.1;91.7;116.7;137.2;152.4;161.8;165.0" dur="9s" begin="-7.5s" repeatCount="indefinite"/></ellipse>
+<g transform="rotate(-18 935 318)"><ellipse cx="935" cy="318" rx="240" ry="62" fill="none" stroke="#FF6B35" stroke-opacity=".5" stroke-dasharray="4 5"/><circle r="5" fill="#FF6B35" filter="url(#glow)"><animateMotion dur="7s" repeatCount="indefinite" path="M1175,318 a240,62 0 1,1 -480,0 a240,62 0 1,1 480,0"/></circle></g>
+<circle cx="973" cy="248" r="4" fill="#FF6B35"/><circle cx="973" cy="248" r="4" fill="none" stroke="#FF6B35"><animate attributeName="r" values="4;16" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0" dur="2s" repeatCount="indefinite"/></circle>
+<path d="M973,248L1043,168H1150" fill="none" stroke="#7D8794" stroke-opacity=".7"/><text x="1049" y="160" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#E8EDF2">ZRK · IN</text>
+<path d="M780,438L740,493H700" fill="none" stroke="#7D8794" stroke-opacity=".7"/><text x="700" y="486" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#7D8794">fig.01 — always rotating</text>
+</g>
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" begin="3.4s" dur="0.5s" fill="freeze"/><text x="1120" y="652" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#7D8794" text-anchor="end" letter-spacing="2">SCROLL</text><path d="M1060,640l6,6l6,-6" fill="none" stroke="#D4FF3A" stroke-width="1.6"><animateTransform attributeName="transform" type="translate" values="0,-3;0,3;0,-3" dur="1.4s" repeatCount="indefinite"/></path></g>
+<g transform="translate(64,752)"><circle r="6" fill="none" stroke="#D4FF3A"><animate attributeName="r" values="6;20" dur="2.4s" begin="0.4s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="2.4s" begin="0.4s" repeatCount="indefinite"/></circle><rect x="-6" y="-6" width="12" height="12" transform="rotate(45)" fill="#07090D" stroke="#D4FF3A" stroke-width="1.5"/><rect x="-2.5" y="-2.5" width="5" height="5" transform="rotate(45)" fill="#D4FF3A"/></g>
+<line x1="78" y1="752" x2="110" y2="752" stroke="#D4FF3A" stroke-opacity=".5" stroke-dasharray="3 3"/>
+<text x="120" y="758" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="13" fill="#D4FF3A" letter-spacing="2">§01</text>
+<text x="166" y="762" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="34" font-weight="700" fill="#E8EDF2" letter-spacing="-.5">whoami</text>
+<text x="1120" y="758" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="12" fill="#7D8794" text-anchor="end">~/about.md</text>
+<path d="M120,784H1120M120,778v12M1120,778v12" stroke="#7D8794" stroke-opacity=".5" fill="none"/>
+<path d="M170,784v-4M220,784v-4M270,784v-4M320,784v-4M370,784v-4M420,784v-4M470,784v-4M520,784v-4M570,784v-4M620,784v-4M670,784v-4M720,784v-4M770,784v-4M820,784v-4M870,784v-4M920,784v-4M970,784v-4M1020,784v-4M1070,784v-4" stroke="#7D8794" stroke-opacity=".35"/>
+<rect x="120" y="783" width="0" height="2" fill="#D4FF3A"><animate attributeName="width" values="0;1000;1000;0" keyTimes="0;.45;.8;1" dur="6s" begin="0.7s" repeatCount="indefinite"/></rect>
+<rect x="120" y="820" width="600" height="330" rx="14" fill="#0C1016" fill-opacity=".85" stroke="#ffffff" stroke-opacity=".09"/>
+<path d="M120,858H720" stroke="#ffffff" stroke-opacity=".07"/>
+<circle cx="142" cy="839" r="5.5" fill="#FF5F57" fill-opacity=".8"/>
+<circle cx="162" cy="839" r="5.5" fill="#FEBC2E" fill-opacity=".8"/>
+<circle cx="182" cy="839" r="5.5" fill="#28C840" fill-opacity=".8"/>
+<text x="420.0" y="844" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="12" fill="#7D8794" text-anchor="middle">~/about.md — zsh</text>
+<text x="148" y="902" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="15" xml:space="preserve"><tspan fill="#D4FF3A">$ </tspan><tspan fill="#E8EDF2">cat about.md</tspan></text>
+<text x="148" y="936" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="15" xml:space="preserve"><tspan fill="#FF6B35"># Shrey Goyal</tspan></text>
+<text x="148" y="970" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="15" xml:space="preserve"><tspan fill="#3A424D">&gt; </tspan><tspan fill="#E8EDF2">4th-year CS undergrad, Thapar Institute</tspan></text>
+<text x="148" y="1004" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="15" xml:space="preserve"><tspan fill="#3A424D">&gt; </tspan><tspan fill="#E8EDF2">full-stack: interface → API → data</tspan></text>
+<text x="148" y="1038" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="15" xml:space="preserve"><tspan fill="#3A424D">&gt; </tspan><tspan fill="#7D8794">prev. </tspan><tspan fill="#E8EDF2">Netsmartz · Headstarter AI</tspan></text>
+<text x="148" y="1072" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="15" xml:space="preserve"><tspan fill="#3A424D">&gt; </tspan><tspan fill="#7D8794">now engineering @ </tspan><tspan fill="#D4FF3A">SuccessBrew</tspan></text>
+<text x="148" y="1106" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="15" xml:space="preserve"><tspan fill="#D4FF3A">$ </tspan></text>
+<rect x="168" y="1092" width="9" height="18" fill="#D4FF3A"><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.5;.5;1" dur="1s" repeatCount="indefinite"/></rect>
+<path d="M760,834V820H774M1106,820H1120V834M1120,1136V1150H1106M774,1150H760V1136" fill="none" stroke="#D4FF3A" stroke-width="1.5"/>
+<text x="784" y="854" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#D4FF3A" letter-spacing="2">SPEC SHEET</text><text x="1096" y="854" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#7D8794" text-anchor="end">rev.04</text>
+<text x="784" y="896" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#7D8794" letter-spacing="1.5">NAME</text>
+<text x="1096" y="896" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="14" fill="#E8EDF2" text-anchor="end">Shrey Goyal</text>
+<path d="M784,912H1096" stroke="#ffffff" stroke-opacity=".1" stroke-dasharray="2 4"/>
+<text x="784" y="938" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#7D8794" letter-spacing="1.5">ORIGIN</text>
+<text x="1096" y="938" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="14" fill="#E8EDF2" text-anchor="end">Zirakpur, IN</text>
+<path d="M784,954H1096" stroke="#ffffff" stroke-opacity=".1" stroke-dasharray="2 4"/>
+<text x="784" y="980" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#7D8794" letter-spacing="1.5">DEGREE</text>
+<text x="1096" y="980" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="14" fill="#E8EDF2" text-anchor="end">B.Tech CSE</text>
+<path d="M784,996H1096" stroke="#ffffff" stroke-opacity=".1" stroke-dasharray="2 4"/>
+<text x="784" y="1022" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#7D8794" letter-spacing="1.5">CLASS OF</text>
+<text x="1096" y="1022" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="14" fill="#E8EDF2" text-anchor="end">2027</text>
+<path d="M784,1038H1096" stroke="#ffffff" stroke-opacity=".1" stroke-dasharray="2 4"/>
+<text x="784" y="1064" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#7D8794" letter-spacing="1.5">PRIMARY</text>
+<text x="1096" y="1064" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="14" fill="#E8EDF2" text-anchor="end">TS · Python</text>
+<path d="M784,1080H1096" stroke="#ffffff" stroke-opacity=".1" stroke-dasharray="2 4"/>
+<text x="784" y="1106" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#7D8794" letter-spacing="1.5">STATUS</text>
+<circle cx="1014" cy="1101" r="4" fill="#D4FF3A" filter="url(#glow)"><animate attributeName="opacity" values="1;.3;1" dur="1.4s" repeatCount="indefinite"/></circle>
+<text x="1096" y="1106" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="14" fill="#D4FF3A" text-anchor="end">shipping</text>
+<g transform="translate(64,1222)"><circle r="6" fill="none" stroke="#D4FF3A"><animate attributeName="r" values="6;20" dur="2.4s" begin="0.8s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="2.4s" begin="0.8s" repeatCount="indefinite"/></circle><rect x="-6" y="-6" width="12" height="12" transform="rotate(45)" fill="#07090D" stroke="#D4FF3A" stroke-width="1.5"/><rect x="-2.5" y="-2.5" width="5" height="5" transform="rotate(45)" fill="#D4FF3A"/></g>
+<line x1="78" y1="1222" x2="110" y2="1222" stroke="#D4FF3A" stroke-opacity=".5" stroke-dasharray="3 3"/>
+<text x="120" y="1228" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="13" fill="#D4FF3A" letter-spacing="2">§02</text>
+<text x="166" y="1232" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="34" font-weight="700" fill="#E8EDF2" letter-spacing="-.5">stack</text>
+<text x="1120" y="1228" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="12" fill="#7D8794" text-anchor="end">keys.config — hot-swappable</text>
+<path d="M120,1254H1120M120,1248v12M1120,1248v12" stroke="#7D8794" stroke-opacity=".5" fill="none"/>
+<path d="M170,1254v-4M220,1254v-4M270,1254v-4M320,1254v-4M370,1254v-4M420,1254v-4M470,1254v-4M520,1254v-4M570,1254v-4M620,1254v-4M670,1254v-4M720,1254v-4M770,1254v-4M820,1254v-4M870,1254v-4M920,1254v-4M970,1254v-4M1020,1254v-4M1070,1254v-4" stroke="#7D8794" stroke-opacity=".35"/>
+<rect x="120" y="1253" width="0" height="2" fill="#D4FF3A"><animate attributeName="width" values="0;1000;1000;0" keyTimes="0;.45;.8;1" dur="6s" begin="1.4s" repeatCount="indefinite"/></rect>
+<rect x="120" y="1294" width="992" height="216" rx="20" fill="#0B0F15" stroke="#ffffff" stroke-opacity=".09"/>
+<rect x="124" y="1298" width="984" height="208" rx="17" fill="none" stroke="#D4FF3A" stroke-opacity=".12"/>
+<rect x="144" y="1318" width="144" height="76" rx="11" fill="#030405"/>
+<g><animateTransform attributeName="transform" type="translate" values="0,0;0,5;0,0;0,0" keyTimes="0;.025;.07;1" dur="6.6000000000000005s" begin="0.0s" repeatCount="indefinite"/>
+<rect x="148" y="1321" width="136" height="63" rx="9" fill="url(#keyTop)" stroke="#ffffff" stroke-opacity=".08"/>
+<rect x="148" y="1321" width="136" height="63" rx="9" fill="#FF6B35" opacity="0"><animate attributeName="opacity" values="0;.22;0;0" keyTimes="0;.025;.12;1" dur="6.6000000000000005s" begin="0.0s" repeatCount="indefinite"/></rect>
+<text x="162" y="1342" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="9.5" fill="#FF6B35" letter-spacing="1.5">LANG</text>
+<circle cx="268" cy="1338" r="3" fill="#FF6B35" filter="url(#glow)"/>
+<text x="162" y="1368" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#E8EDF2">TypeScript</text>
+</g>
+<rect x="304" y="1318" width="144" height="76" rx="11" fill="#030405"/>
+<g><animateTransform attributeName="transform" type="translate" values="0,0;0,5;0,0;0,0" keyTimes="0;.025;.07;1" dur="6.6000000000000005s" begin="0.55s" repeatCount="indefinite"/>
+<rect x="308" y="1321" width="136" height="63" rx="9" fill="url(#keyTop)" stroke="#ffffff" stroke-opacity=".08"/>
+<rect x="308" y="1321" width="136" height="63" rx="9" fill="#FF6B35" opacity="0"><animate attributeName="opacity" values="0;.22;0;0" keyTimes="0;.025;.12;1" dur="6.6000000000000005s" begin="0.55s" repeatCount="indefinite"/></rect>
+<text x="322" y="1342" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="9.5" fill="#FF6B35" letter-spacing="1.5">LANG</text>
+<circle cx="428" cy="1338" r="3" fill="#FF6B35" filter="url(#glow)"/>
+<text x="322" y="1368" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#E8EDF2">Python</text>
+</g>
+<rect x="464" y="1318" width="144" height="76" rx="11" fill="#030405"/>
+<g><animateTransform attributeName="transform" type="translate" values="0,0;0,5;0,0;0,0" keyTimes="0;.025;.07;1" dur="6.6000000000000005s" begin="1.1s" repeatCount="indefinite"/>
+<rect x="468" y="1321" width="136" height="63" rx="9" fill="url(#keyTop)" stroke="#ffffff" stroke-opacity=".08"/>
+<rect x="468" y="1321" width="136" height="63" rx="9" fill="#5CE1E6" opacity="0"><animate attributeName="opacity" values="0;.22;0;0" keyTimes="0;.025;.12;1" dur="6.6000000000000005s" begin="1.1s" repeatCount="indefinite"/></rect>
+<text x="482" y="1342" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="9.5" fill="#5CE1E6" letter-spacing="1.5">FRONT</text>
+<circle cx="588" cy="1338" r="3" fill="#5CE1E6" filter="url(#glow)"/>
+<text x="482" y="1368" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#E8EDF2">React</text>
+</g>
+<rect x="624" y="1318" width="144" height="76" rx="11" fill="#030405"/>
+<g><animateTransform attributeName="transform" type="translate" values="0,0;0,5;0,0;0,0" keyTimes="0;.025;.07;1" dur="6.6000000000000005s" begin="1.6500000000000001s" repeatCount="indefinite"/>
+<rect x="628" y="1321" width="136" height="63" rx="9" fill="url(#keyTop)" stroke="#ffffff" stroke-opacity=".08"/>
+<rect x="628" y="1321" width="136" height="63" rx="9" fill="#5CE1E6" opacity="0"><animate attributeName="opacity" values="0;.22;0;0" keyTimes="0;.025;.12;1" dur="6.6000000000000005s" begin="1.6500000000000001s" repeatCount="indefinite"/></rect>
+<text x="642" y="1342" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="9.5" fill="#5CE1E6" letter-spacing="1.5">FRONT</text>
+<circle cx="748" cy="1338" r="3" fill="#5CE1E6" filter="url(#glow)"/>
+<text x="642" y="1368" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#E8EDF2">Next.js</text>
+</g>
+<rect x="784" y="1318" width="144" height="76" rx="11" fill="#030405"/>
+<g><animateTransform attributeName="transform" type="translate" values="0,0;0,5;0,0;0,0" keyTimes="0;.025;.07;1" dur="6.6000000000000005s" begin="2.2s" repeatCount="indefinite"/>
+<rect x="788" y="1321" width="136" height="63" rx="9" fill="url(#keyTop)" stroke="#ffffff" stroke-opacity=".08"/>
+<rect x="788" y="1321" width="136" height="63" rx="9" fill="#5CE1E6" opacity="0"><animate attributeName="opacity" values="0;.22;0;0" keyTimes="0;.025;.12;1" dur="6.6000000000000005s" begin="2.2s" repeatCount="indefinite"/></rect>
+<text x="802" y="1342" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="9.5" fill="#5CE1E6" letter-spacing="1.5">FRONT</text>
+<circle cx="908" cy="1338" r="3" fill="#5CE1E6" filter="url(#glow)"/>
+<text x="802" y="1368" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#E8EDF2">Tailwind</text>
+</g>
+<rect x="944" y="1318" width="144" height="76" rx="11" fill="#030405"/>
+<g><animateTransform attributeName="transform" type="translate" values="0,0;0,5;0,0;0,0" keyTimes="0;.025;.07;1" dur="6.6000000000000005s" begin="2.75s" repeatCount="indefinite"/>
+<rect x="948" y="1321" width="136" height="63" rx="9" fill="url(#keyTop)" stroke="#ffffff" stroke-opacity=".08"/>
+<rect x="948" y="1321" width="136" height="63" rx="9" fill="#D4FF3A" opacity="0"><animate attributeName="opacity" values="0;.22;0;0" keyTimes="0;.025;.12;1" dur="6.6000000000000005s" begin="2.75s" repeatCount="indefinite"/></rect>
+<text x="962" y="1342" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="9.5" fill="#D4FF3A" letter-spacing="1.5">BACK</text>
+<circle cx="1068" cy="1338" r="3" fill="#D4FF3A" filter="url(#glow)"/>
+<text x="962" y="1368" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#E8EDF2">Node.js</text>
+</g>
+<rect x="144" y="1410" width="144" height="76" rx="11" fill="#030405"/>
+<g><animateTransform attributeName="transform" type="translate" values="0,0;0,5;0,0;0,0" keyTimes="0;.025;.07;1" dur="6.6000000000000005s" begin="3.3000000000000003s" repeatCount="indefinite"/>
+<rect x="148" y="1413" width="136" height="63" rx="9" fill="url(#keyTop)" stroke="#ffffff" stroke-opacity=".08"/>
+<rect x="148" y="1413" width="136" height="63" rx="9" fill="#D4FF3A" opacity="0"><animate attributeName="opacity" values="0;.22;0;0" keyTimes="0;.025;.12;1" dur="6.6000000000000005s" begin="3.3000000000000003s" repeatCount="indefinite"/></rect>
+<text x="162" y="1434" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="9.5" fill="#D4FF3A" letter-spacing="1.5">BACK</text>
+<circle cx="268" cy="1430" r="3" fill="#D4FF3A" filter="url(#glow)"/>
+<text x="162" y="1460" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#E8EDF2">FastAPI</text>
+</g>
+<rect x="304" y="1410" width="144" height="76" rx="11" fill="#030405"/>
+<g><animateTransform attributeName="transform" type="translate" values="0,0;0,5;0,0;0,0" keyTimes="0;.025;.07;1" dur="6.6000000000000005s" begin="3.8500000000000005s" repeatCount="indefinite"/>
+<rect x="308" y="1413" width="136" height="63" rx="9" fill="url(#keyTop)" stroke="#ffffff" stroke-opacity=".08"/>
+<rect x="308" y="1413" width="136" height="63" rx="9" fill="#B392F0" opacity="0"><animate attributeName="opacity" values="0;.22;0;0" keyTimes="0;.025;.12;1" dur="6.6000000000000005s" begin="3.8500000000000005s" repeatCount="indefinite"/></rect>
+<text x="322" y="1434" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="9.5" fill="#B392F0" letter-spacing="1.5">DATA</text>
+<circle cx="428" cy="1430" r="3" fill="#B392F0" filter="url(#glow)"/>
+<text x="322" y="1460" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#E8EDF2">PostgreSQL</text>
+</g>
+<rect x="464" y="1410" width="144" height="76" rx="11" fill="#030405"/>
+<g><animateTransform attributeName="transform" type="translate" values="0,0;0,5;0,0;0,0" keyTimes="0;.025;.07;1" dur="6.6000000000000005s" begin="4.4s" repeatCount="indefinite"/>
+<rect x="468" y="1413" width="136" height="63" rx="9" fill="url(#keyTop)" stroke="#ffffff" stroke-opacity=".08"/>
+<rect x="468" y="1413" width="136" height="63" rx="9" fill="#FF6B35" opacity="0"><animate attributeName="opacity" values="0;.22;0;0" keyTimes="0;.025;.12;1" dur="6.6000000000000005s" begin="4.4s" repeatCount="indefinite"/></rect>
+<text x="482" y="1434" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="9.5" fill="#FF6B35" letter-spacing="1.5">LANG</text>
+<circle cx="588" cy="1430" r="3" fill="#FF6B35" filter="url(#glow)"/>
+<text x="482" y="1460" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#E8EDF2">SQL</text>
+</g>
+<rect x="624" y="1410" width="144" height="76" rx="11" fill="#030405"/>
+<g><animateTransform attributeName="transform" type="translate" values="0,0;0,5;0,0;0,0" keyTimes="0;.025;.07;1" dur="6.6000000000000005s" begin="4.95s" repeatCount="indefinite"/>
+<rect x="628" y="1413" width="136" height="63" rx="9" fill="url(#keyTop)" stroke="#ffffff" stroke-opacity=".08"/>
+<rect x="628" y="1413" width="136" height="63" rx="9" fill="#B392F0" opacity="0"><animate attributeName="opacity" values="0;.22;0;0" keyTimes="0;.025;.12;1" dur="6.6000000000000005s" begin="4.95s" repeatCount="indefinite"/></rect>
+<text x="642" y="1434" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="9.5" fill="#B392F0" letter-spacing="1.5">DATA</text>
+<circle cx="748" cy="1430" r="3" fill="#B392F0" filter="url(#glow)"/>
+<text x="642" y="1460" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#E8EDF2">Firebase</text>
+</g>
+<rect x="784" y="1410" width="144" height="76" rx="11" fill="#030405"/>
+<g><animateTransform attributeName="transform" type="translate" values="0,0;0,5;0,0;0,0" keyTimes="0;.025;.07;1" dur="6.6000000000000005s" begin="5.5s" repeatCount="indefinite"/>
+<rect x="788" y="1413" width="136" height="63" rx="9" fill="url(#keyTop)" stroke="#ffffff" stroke-opacity=".08"/>
+<rect x="788" y="1413" width="136" height="63" rx="9" fill="#FF7EB6" opacity="0"><animate attributeName="opacity" values="0;.22;0;0" keyTimes="0;.025;.12;1" dur="6.6000000000000005s" begin="5.5s" repeatCount="indefinite"/></rect>
+<text x="802" y="1434" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="9.5" fill="#FF7EB6" letter-spacing="1.5">ML</text>
+<circle cx="908" cy="1430" r="3" fill="#FF7EB6" filter="url(#glow)"/>
+<text x="802" y="1460" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#E8EDF2">scikit-learn</text>
+</g>
+<rect x="944" y="1410" width="144" height="76" rx="11" fill="#030405"/>
+<g><animateTransform attributeName="transform" type="translate" values="0,0;0,5;0,0;0,0" keyTimes="0;.025;.07;1" dur="6.6000000000000005s" begin="6.050000000000001s" repeatCount="indefinite"/>
+<rect x="948" y="1413" width="136" height="63" rx="9" fill="url(#keyTop)" stroke="#ffffff" stroke-opacity=".08"/>
+<rect x="948" y="1413" width="136" height="63" rx="9" fill="#E8EDF2" opacity="0"><animate attributeName="opacity" values="0;.22;0;0" keyTimes="0;.025;.12;1" dur="6.6000000000000005s" begin="6.050000000000001s" repeatCount="indefinite"/></rect>
+<text x="962" y="1434" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="9.5" fill="#E8EDF2" letter-spacing="1.5">TOOLS</text>
+<circle cx="1068" cy="1430" r="3" fill="#E8EDF2" filter="url(#glow)"/>
+<text x="962" y="1460" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#E8EDF2">Git</text>
+</g>
+<circle cx="124" cy="1544" r="4" fill="#FF6B35"/><text x="136" y="1548" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#7D8794" letter-spacing="1.5">LANG</text>
+<circle cx="212" cy="1544" r="4" fill="#5CE1E6"/><text x="224" y="1548" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#7D8794" letter-spacing="1.5">FRONT</text>
+<circle cx="308" cy="1544" r="4" fill="#D4FF3A"/><text x="320" y="1548" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#7D8794" letter-spacing="1.5">BACK</text>
+<circle cx="396" cy="1544" r="4" fill="#B392F0"/><text x="408" y="1548" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#7D8794" letter-spacing="1.5">DATA</text>
+<circle cx="484" cy="1544" r="4" fill="#FF7EB6"/><text x="496" y="1548" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#7D8794" letter-spacing="1.5">ML</text>
+<circle cx="556" cy="1544" r="4" fill="#E8EDF2"/><text x="568" y="1548" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#7D8794" letter-spacing="1.5">TOOLS</text>
+<text x="1112" y="1548" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#7D8794" text-anchor="end">fig.02 — daily drivers, always typing</text>
+<g transform="translate(64,1632)"><circle r="6" fill="none" stroke="#D4FF3A"><animate attributeName="r" values="6;20" dur="2.4s" begin="1.2000000000000002s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="2.4s" begin="1.2000000000000002s" repeatCount="indefinite"/></circle><rect x="-6" y="-6" width="12" height="12" transform="rotate(45)" fill="#07090D" stroke="#D4FF3A" stroke-width="1.5"/><rect x="-2.5" y="-2.5" width="5" height="5" transform="rotate(45)" fill="#D4FF3A"/></g>
+<line x1="78" y1="1632" x2="110" y2="1632" stroke="#D4FF3A" stroke-opacity=".5" stroke-dasharray="3 3"/>
+<text x="120" y="1638" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="13" fill="#D4FF3A" letter-spacing="2">§03</text>
+<text x="166" y="1642" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="34" font-weight="700" fill="#E8EDF2" letter-spacing="-.5">git log</text>
+<text x="1120" y="1638" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="12" fill="#7D8794" text-anchor="end">--graph --oneline experience</text>
+<path d="M120,1664H1120M120,1658v12M1120,1658v12" stroke="#7D8794" stroke-opacity=".5" fill="none"/>
+<path d="M170,1664v-4M220,1664v-4M270,1664v-4M320,1664v-4M370,1664v-4M420,1664v-4M470,1664v-4M520,1664v-4M570,1664v-4M620,1664v-4M670,1664v-4M720,1664v-4M770,1664v-4M820,1664v-4M870,1664v-4M920,1664v-4M970,1664v-4M1020,1664v-4M1070,1664v-4" stroke="#7D8794" stroke-opacity=".35"/>
+<rect x="120" y="1663" width="0" height="2" fill="#D4FF3A"><animate attributeName="width" values="0;1000;1000;0" keyTimes="0;.45;.8;1" dur="6s" begin="2.0999999999999996s" repeatCount="indefinite"/></rect>
+<rect x="120" y="1700" width="1000" height="468" rx="14" fill="#0C1016" fill-opacity=".85" stroke="#ffffff" stroke-opacity=".09"/>
+<path d="M120,1738H1120" stroke="#ffffff" stroke-opacity=".07"/>
+<circle cx="142" cy="1719" r="5.5" fill="#FF5F57" fill-opacity=".8"/>
+<circle cx="162" cy="1719" r="5.5" fill="#FEBC2E" fill-opacity=".8"/>
+<circle cx="182" cy="1719" r="5.5" fill="#28C840" fill-opacity=".8"/>
+<text x="620.0" y="1724" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="12" fill="#7D8794" text-anchor="middle">shrey@main: ~/career — git log --graph</text>
+<path d="M168,1786V2076" stroke="#D4FF3A" stroke-width="2"/>
+<path d="M168,1960 C168,1930 204,1930 204,1902 C204,1874 168,1874 168,1844" fill="none" stroke="#FF6B35" stroke-width="2"/>
+<circle r="3.5" fill="#FF6B35" filter="url(#glow)"><animateMotion dur="3s" repeatCount="indefinite" path="M168,1960 C168,1930 204,1930 204,1902 C204,1874 168,1874 168,1844"/></circle>
+<circle r="3.5" fill="#D4FF3A" filter="url(#glow)"><animateMotion dur="5s" repeatCount="indefinite" path="M168,2076V1786"/></circle>
+<circle cx="168" cy="1786" r="8" fill="none" stroke="#D4FF3A"><animate attributeName="r" values="8;18" dur="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0" dur="1.8s" repeatCount="indefinite"/></circle>
+<circle cx="168" cy="1786" r="7" fill="#07090D" stroke="#D4FF3A" stroke-width="2"/>
+<circle cx="168" cy="1786" r="3" fill="#D4FF3A"/>
+<text x="248" y="1791" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#FEBC2E">a3f9c1e</tspan><tspan fill="#5CE1E6"> (HEAD -&gt; main)</tspan><tspan fill="#E8EDF2"> feat: building full-stack systems @ SuccessBrew</tspan></text>
+<rect x="1049" y="1774" width="43" height="22" rx="11" fill="#D4FF3A" fill-opacity=".1" stroke="#D4FF3A" stroke-opacity=".6"/><text x="1070.5" y="1789" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#D4FF3A" text-anchor="middle">now</text>
+<path d="M248,1815.0H1092" stroke="#ffffff" stroke-opacity=".04"/>
+<circle cx="168" cy="1844" r="7" fill="#07090D" stroke="#D4FF3A" stroke-width="2"/>
+<circle cx="168" cy="1844" r="3" fill="#FF6B35"/>
+<text x="248" y="1849" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#FEBC2E">7be21d0</tspan><tspan fill="#E8EDF2"> merge: hackathon → main — National Winner, SIH 2025</tspan></text>
+<rect x="1035" y="1832" width="57" height="22" rx="11" fill="#FF6B35" fill-opacity=".1" stroke="#FF6B35" stroke-opacity=".6"/><text x="1063.5" y="1847" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#FF6B35" text-anchor="middle">award</text>
+<path d="M248,1873.0H1092" stroke="#ffffff" stroke-opacity=".04"/>
+<circle cx="204" cy="1902" r="7" fill="#07090D" stroke="#FF6B35" stroke-width="2"/>
+<text x="248" y="1907" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#FEBC2E">4c8e0aa</tspan><tspan fill="#5CE1E6"> (hackathon)</tspan><tspan fill="#E8EDF2"> feat(sih): VR chemical-disaster response sim for NDRF</tspan></text>
+<rect x="1042" y="1890" width="50" height="22" rx="11" fill="#FF6B35" fill-opacity=".1" stroke="#FF6B35" stroke-opacity=".6"/><text x="1067.0" y="1905" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#FF6B35" text-anchor="middle">2025</text>
+<path d="M248,1931.0H1092" stroke="#ffffff" stroke-opacity=".04"/>
+<circle cx="168" cy="1960" r="7" fill="#07090D" stroke="#D4FF3A" stroke-width="2"/>
+<text x="248" y="1965" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#FEBC2E">91d2b6f</tspan><tspan fill="#E8EDF2"> feat: internship @ Netsmartz</tspan></text>
+<rect x="1042" y="1948" width="50" height="22" rx="11" fill="#5CE1E6" fill-opacity=".1" stroke="#5CE1E6" stroke-opacity=".6"/><text x="1067.0" y="1963" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#5CE1E6" text-anchor="middle">work</text>
+<path d="M248,1989.0H1092" stroke="#ffffff" stroke-opacity=".04"/>
+<circle cx="168" cy="2018" r="7" fill="#07090D" stroke="#D4FF3A" stroke-width="2"/>
+<text x="248" y="2023" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#FEBC2E">2e7a4c3</tspan><tspan fill="#E8EDF2"> feat: internship @ Headstarter AI</tspan></text>
+<rect x="1042" y="2006" width="50" height="22" rx="11" fill="#5CE1E6" fill-opacity=".1" stroke="#5CE1E6" stroke-opacity=".6"/><text x="1067.0" y="2021" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#5CE1E6" text-anchor="middle">work</text>
+<path d="M248,2047.0H1092" stroke="#ffffff" stroke-opacity=".04"/>
+<circle cx="168" cy="2076" r="7" fill="#07090D" stroke="#D4FF3A" stroke-width="2"/>
+<text x="248" y="2081" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="14" xml:space="preserve"><tspan fill="#FEBC2E">0c1a2b3</tspan><tspan fill="#5CE1E6"> (tag: v2023)</tspan><tspan fill="#E8EDF2"> init: B.Tech CSE @ Thapar Institute, Patiala</tspan></text>
+<rect x="1049" y="2064" width="43" height="22" rx="11" fill="#B392F0" fill-opacity=".1" stroke="#B392F0" stroke-opacity=".6"/><text x="1070.5" y="2079" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#B392F0" text-anchor="middle">edu</text>
+<text x="148" y="2146" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="12" fill="#7D8794">6 commits · 1 merge · 0 conflicts · working tree clean</text>
+<text x="1092" y="2146" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="12" fill="#D4FF3A" text-anchor="end">✓ up to date</text>
+<g transform="translate(64,2232)"><circle r="6" fill="none" stroke="#D4FF3A"><animate attributeName="r" values="6;20" dur="2.4s" begin="1.6s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="2.4s" begin="1.6s" repeatCount="indefinite"/></circle><rect x="-6" y="-6" width="12" height="12" transform="rotate(45)" fill="#07090D" stroke="#D4FF3A" stroke-width="1.5"/><rect x="-2.5" y="-2.5" width="5" height="5" transform="rotate(45)" fill="#D4FF3A"/></g>
+<line x1="78" y1="2232" x2="110" y2="2232" stroke="#D4FF3A" stroke-opacity=".5" stroke-dasharray="3 3"/>
+<text x="120" y="2238" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="13" fill="#D4FF3A" letter-spacing="2">§04</text>
+<text x="166" y="2242" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="34" font-weight="700" fill="#E8EDF2" letter-spacing="-.5">spotlight</text>
+<text x="1120" y="2238" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="12" fill="#7D8794" text-anchor="end">awards/sih-2025.log</text>
+<path d="M120,2264H1120M120,2258v12M1120,2258v12" stroke="#7D8794" stroke-opacity=".5" fill="none"/>
+<path d="M170,2264v-4M220,2264v-4M270,2264v-4M320,2264v-4M370,2264v-4M420,2264v-4M470,2264v-4M520,2264v-4M570,2264v-4M620,2264v-4M670,2264v-4M720,2264v-4M770,2264v-4M820,2264v-4M870,2264v-4M920,2264v-4M970,2264v-4M1020,2264v-4M1070,2264v-4" stroke="#7D8794" stroke-opacity=".35"/>
+<rect x="120" y="2263" width="0" height="2" fill="#D4FF3A"><animate attributeName="width" values="0;1000;1000;0" keyTimes="0;.45;.8;1" dur="6s" begin="2.8s" repeatCount="indefinite"/></rect>
+<rect x="120" y="2300" width="1000" height="340" rx="18" fill="#0C1016" fill-opacity=".85" stroke="url(#award)" stroke-opacity=".55"/>
+<g>
+<circle cx="290" cy="2470" r="120.0" fill="none" stroke="#D4FF3A" stroke-opacity=".25"/>
+<circle cx="290" cy="2470" r="86.4" fill="none" stroke="#D4FF3A" stroke-opacity=".25"/>
+<circle cx="290" cy="2470" r="52.8" fill="none" stroke="#D4FF3A" stroke-opacity=".25"/>
+<circle cx="290" cy="2470" r="19.2" fill="none" stroke="#D4FF3A" stroke-opacity=".25"/>
+<path d="M170,2470H410M290,2350V2590" stroke="#D4FF3A" stroke-opacity=".2"/>
+<path d="M290,2470 L410,2470 A120,120 0 0,0 367.1,2378.1 Z" fill="url(#sweep)"><animateTransform attributeName="transform" type="rotate" from="0 290 2470" to="360 290 2470" dur="4s" repeatCount="indefinite"/></path>
+<line x1="290" y1="2470" x2="410" y2="2470" stroke="#D4FF3A" stroke-width="1.5" filter="url(#glow)"><animateTransform attributeName="transform" type="rotate" from="0 290 2470" to="360 290 2470" dur="4s" repeatCount="indefinite"/></line>
+<circle cx="345.2" cy="2516.3" r="4" fill="#FF6B35" filter="url(#glow)" opacity="0"><animate attributeName="opacity" values="0;1;0" keyTimes="0;.05;.6" dur="4s" begin="0.44s" repeatCount="indefinite"/></circle>
+<circle cx="206.9" cy="2518.0" r="4" fill="#D4FF3A" filter="url(#glow)" opacity="0"><animate attributeName="opacity" values="0;1;0" keyTimes="0;.05;.6" dur="4s" begin="1.67s" repeatCount="indefinite"/></circle>
+<circle cx="281.7" cy="2422.7" r="4" fill="#5CE1E6" filter="url(#glow)" opacity="0"><animate attributeName="opacity" values="0;1;0" keyTimes="0;.05;.6" dur="4s" begin="2.89s" repeatCount="indefinite"/></circle>
+<circle cx="372.7" cy="2400.6" r="4" fill="#D4FF3A" filter="url(#glow)" opacity="0"><animate attributeName="opacity" values="0;1;0" keyTimes="0;.05;.6" dur="4s" begin="3.56s" repeatCount="indefinite"/></circle>
+<circle cx="290" cy="2470" r="3" fill="#D4FF3A"/></g>
+<text x="290" y="2622" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#7D8794" text-anchor="middle">fig.04 — scanning for hazards</text>
+<text x="470" y="2374" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="13" fill="#D4FF3A" letter-spacing="3">SMART INDIA HACKATHON · 2025</text>
+<text x="466" y="2448" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="68" font-weight="800" fill="#E8EDF2" letter-spacing="-2">National</text>
+<text x="466" y="2518" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="68" font-weight="800" fill="url(#award)" letter-spacing="-2">Winner.</text>
+<text x="470" y="2558" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="14" fill="#7D8794">Built a VR chemical-disaster response simulator for <tspan fill="#E8EDF2">NDRF</tspan>.</text>
+<rect x="470" y="2578" width="41.6" height="26" rx="13" fill="#ffffff" fill-opacity=".04" stroke="#ffffff" stroke-opacity=".18"/><text x="490.8" y="2595" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="12" fill="#E8EDF2" text-anchor="middle">VR</text>
+<rect x="521.6" y="2578" width="104.0" height="26" rx="13" fill="#ffffff" fill-opacity=".04" stroke="#ffffff" stroke-opacity=".18"/><text x="573.6" y="2595" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="12" fill="#E8EDF2" text-anchor="middle">simulation</text>
+<rect x="635.6" y="2578" width="158.6" height="26" rx="13" fill="#ffffff" fill-opacity=".04" stroke="#ffffff" stroke-opacity=".18"/><text x="714.9" y="2595" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="12" fill="#E8EDF2" text-anchor="middle">disaster response</text>
+<g><animateTransform attributeName="transform" type="rotate" from="0 1010 2392" to="360 1010 2392" dur="22s" repeatCount="indefinite"/><circle cx="1010" cy="2392" r="62" fill="none" stroke="#FF6B35" stroke-opacity=".6"/><circle cx="1010" cy="2392" r="38" fill="none" stroke="#FF6B35" stroke-opacity=".35" stroke-dasharray="2 4"/><text font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="10" fill="#FF6B35" letter-spacing="1"><textPath href="#stampPath" textLength="308" lengthAdjust="spacing">★ NATIONAL WINNER ★ SIH 2025 ★ SMART INDIA HACKATHON </textPath></text></g>
+<text x="1010" y="2403" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="30" font-weight="800" fill="#FF6B35" text-anchor="middle">#1</text>
+<g transform="translate(64,2712)"><circle r="6" fill="none" stroke="#D4FF3A"><animate attributeName="r" values="6;20" dur="2.4s" begin="2.0s" repeatCount="indefinite"/><animate attributeName="opacity" values=".8;0" dur="2.4s" begin="2.0s" repeatCount="indefinite"/></circle><rect x="-6" y="-6" width="12" height="12" transform="rotate(45)" fill="#07090D" stroke="#D4FF3A" stroke-width="1.5"/><rect x="-2.5" y="-2.5" width="5" height="5" transform="rotate(45)" fill="#D4FF3A"/></g>
+<line x1="78" y1="2712" x2="110" y2="2712" stroke="#D4FF3A" stroke-opacity=".5" stroke-dasharray="3 3"/>
+<text x="120" y="2718" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="13" fill="#D4FF3A" letter-spacing="2">§05</text>
+<text x="166" y="2722" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="34" font-weight="700" fill="#E8EDF2" letter-spacing="-.5">ping shrey</text>
+<text x="1120" y="2718" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="12" fill="#7D8794" text-anchor="end">say hi — replies are fast</text>
+<path d="M120,2744H1120M120,2738v12M1120,2738v12" stroke="#7D8794" stroke-opacity=".5" fill="none"/>
+<path d="M170,2744v-4M220,2744v-4M270,2744v-4M320,2744v-4M370,2744v-4M420,2744v-4M470,2744v-4M520,2744v-4M570,2744v-4M620,2744v-4M670,2744v-4M720,2744v-4M770,2744v-4M820,2744v-4M870,2744v-4M920,2744v-4M970,2744v-4M1020,2744v-4M1070,2744v-4" stroke="#7D8794" stroke-opacity=".35"/>
+<rect x="120" y="2743" width="0" height="2" fill="#D4FF3A"><animate attributeName="width" values="0;1000;1000;0" keyTimes="0;.45;.8;1" dur="6s" begin="3.5s" repeatCount="indefinite"/></rect>
+<rect x="120" y="2780" width="1000" height="260" rx="14" fill="#0C1016" fill-opacity=".85" stroke="#ffffff" stroke-opacity=".09"/>
+<path d="M120,2818H1120" stroke="#ffffff" stroke-opacity=".07"/>
+<circle cx="142" cy="2799" r="5.5" fill="#FF5F57" fill-opacity=".8"/>
+<circle cx="162" cy="2799" r="5.5" fill="#FEBC2E" fill-opacity=".8"/>
+<circle cx="182" cy="2799" r="5.5" fill="#28C840" fill-opacity=".8"/>
+<text x="620.0" y="2804" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="12" fill="#7D8794" text-anchor="middle">shrey@net: ~ — ping</text>
+<text x="148" y="2856" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="15" xml:space="preserve"><tspan fill="#D4FF3A">$ </tspan><tspan fill="#E8EDF2">ping shrey</tspan></text>
+<text x="148" y="2886" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="15" xml:space="preserve"><tspan fill="#7D8794">PING shrey (shreyg05.me): 56 data bytes</tspan></text>
+<circle cx="154" cy="2911" r="3.5" fill="#D4FF3A" opacity=".15"><animate attributeName="opacity" values=".15;1;.15;.15" keyTimes="0;.08;.3;1" dur="3s" begin="0s" repeatCount="indefinite"/></circle>
+<text y="2916" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="15"><tspan x="170" fill="#7D8794">64 bytes from</tspan><tspan x="300" fill="#D4FF3A">mail</tspan><tspan x="400" fill="#E8EDF2">shreygoyal50@gmail.com</tspan><tspan x="760" fill="#7D8794">icmp_seq=1 time=0.42ms</tspan></text>
+<circle cx="154" cy="2941" r="3.5" fill="#D4FF3A" opacity=".15"><animate attributeName="opacity" values=".15;1;.15;.15" keyTimes="0;.08;.3;1" dur="3s" begin="1s" repeatCount="indefinite"/></circle>
+<text y="2946" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="15"><tspan x="170" fill="#7D8794">64 bytes from</tspan><tspan x="300" fill="#D4FF3A">web</tspan><tspan x="400" fill="#E8EDF2">shreyg05.me</tspan><tspan x="760" fill="#7D8794">icmp_seq=2 time=0.38ms</tspan></text>
+<circle cx="154" cy="2971" r="3.5" fill="#D4FF3A" opacity=".15"><animate attributeName="opacity" values=".15;1;.15;.15" keyTimes="0;.08;.3;1" dur="3s" begin="2s" repeatCount="indefinite"/></circle>
+<text y="2976" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="15"><tspan x="170" fill="#7D8794">64 bytes from</tspan><tspan x="300" fill="#D4FF3A">linkedin</tspan><tspan x="400" fill="#E8EDF2">in/shreybuilds</tspan><tspan x="760" fill="#7D8794">icmp_seq=3 time=0.51ms</tspan></text>
+<text x="148" y="3016" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="15" fill="#FF6B35">--- 3 packets transmitted, 3 received, 0% packet loss ---</text>
+<g transform="rotate(-3 590.0 3156)"><rect x="-100" y="3130" width="1380" height="52" fill="#D4FF3A"/><g><animateTransform attributeName="transform" type="translate" from="0,0" to="-516.0,0" dur="18s" repeatCount="indefinite"/><text x="-1032.0" y="3163" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="20" font-weight="700" fill="#07090D" xml:space="preserve">SHREY GOYAL // BUILD // SHIP // ITERATE // SHREY GOYAL // BUILD // SHIP // ITERATE // SHREY GOYAL // BUILD // SHIP // ITERATE // SHREY GOYAL // BUILD // SHIP // ITERATE // SHREY GOYAL // BUILD // SHIP // ITERATE // </text></g></g>
+<g transform="rotate(2.5 590.0 3166)"><rect x="-100" y="3140" width="1380" height="52" fill="#FF6B35"/><g><animateTransform attributeName="transform" type="translate" from="0,0" to="516.0,0" dur="24s" repeatCount="indefinite"/><text x="-1032.0" y="3173" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="20" font-weight="700" fill="#07090D" xml:space="preserve">SHREY GOYAL // BUILD // SHIP // ITERATE // SHREY GOYAL // BUILD // SHIP // ITERATE // SHREY GOYAL // BUILD // SHIP // ITERATE // SHREY GOYAL // BUILD // SHIP // ITERATE // SHREY GOYAL // BUILD // SHIP // ITERATE // </text></g></g>
+<rect x="57" y="3065" width="14" height="14" fill="#07090D" stroke="#D4FF3A" stroke-width="1.5"/><rect x="61" y="3069" width="6" height="6" fill="#D4FF3A"/>
+<text x="86" y="3077" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="12" fill="#D4FF3A" letter-spacing="2">EOF</text>
+<text x="590.0" y="3242" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="18" fill="#E8EDF2" text-anchor="middle">thanks for scrolling this far.</text>
+<text x="590.0" y="3266" font-family="'JetBrains Mono','Fira Code',Consolas,Menlo,monospace" font-size="11" fill="#7D8794" text-anchor="middle" letter-spacing="2">HAND-DRAWN IN SVG · SHREY GOYAL · 2026</text>
+</g></svg>
